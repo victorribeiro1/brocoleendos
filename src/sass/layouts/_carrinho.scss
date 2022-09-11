@@ -1,0 +1,329 @@
+.carrinho {
+    padding: 20px;
+
+    min-width: 400px;
+
+    // min-height: 350px;
+
+    @include flex-container (column, flex-start, center);
+    
+    position: fixed;
+    bottom: 0;
+    right: 0px;
+    transform: translateX(100%);
+    
+    color: var(--color-secondary);
+    
+    background-color: var(--color-background);
+    
+    z-index: 150;
+    
+    height: calc(100vh - 80px + 80px);
+    
+    transition: .4s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+    &.active {
+        transform: translateX(0%);
+    }
+
+    &__header {
+        @include flex-container (row, space-between, center);
+
+        // background-color: #f65;
+
+        width: 100%;
+
+        margin-bottom: 23px;
+
+        position: relative;
+
+        &::before {
+            content: "";
+
+            position: absolute;
+
+            left: 50%;
+            top: 175%;
+            transform: translate(-50%, -50%);
+
+            height: 4px;
+            width: 100%;
+
+            background-color: var(--color-secondary);
+            border-radius: 999px;
+        }
+    }
+
+    &__heading {
+        font-size: 2rem;
+    }
+
+    &__close-button {
+        height: 30px;
+        width:  30px;
+
+        cursor: pointer;
+
+        border-radius: 999px;
+
+        position: relative;
+
+        background-color: var(--color-secondary);
+
+        &__line {
+            background-color: #fff;
+
+            position: absolute;
+
+            left: 50%;
+            top: 50%;
+
+            border-radius: 999px;
+
+            &--1 {
+                width: 2px;
+                height: 50%;
+
+                transform: translate(-50%, -50%) rotateZ(45deg);
+            }
+            
+            &--2 {
+                width: 50%;
+                height: 2px;
+
+                transform: translate(-50%, -50%) rotateZ(45deg);
+            }
+        }
+    }
+
+    &__products-list {
+        width: 100%;
+
+        max-height: 80%;
+
+        overflow: scroll;
+
+        // background-color: #f00;
+        // background-color: #fff;
+
+        &::-webkit-scrollbar {
+            display: none
+        }
+    }
+
+    &__product {
+        @include flex-container (row, space-between, center);
+        
+        // background-color: #6f0;
+
+        height: 14.6rem;
+        
+        padding: 10px 5px;
+        
+        &:not(:last-of-type) {
+            border-bottom: 1px solid #707070;
+        }
+
+        &__img {
+            height: 90px;
+            width:  90px;
+            
+            object-fit: cover;
+            
+            border-radius: 999px;
+        }
+        
+        &__column {
+            @include flex-container (column, space-between, center);
+            // background-color: #978;
+
+            height: 100%;
+            width: 74%
+        }
+        
+        &__row {
+            @include flex-container (row, space-between, center);
+            // background-color: #53f;
+
+            width: 100%;
+
+            &--1 {
+                position: relative;
+                bottom: -10px;
+            }
+
+            &--2 {
+                position: relative;
+                top: -20px;
+            }
+
+        }
+    
+        &__name {
+            font-size: 2rem;
+            font-weight: 700;
+
+            position: relative;
+            right: -20px;
+        }
+        
+        &__remove {
+            height: 30px;
+            width:  30px;
+            
+            cursor: pointer;
+
+            border-radius: 999px;
+            
+            position: relative;
+            
+            // background-color: var(--color-secondary);
+            
+            &__line {
+                background-color: #707070;
+                
+                position: absolute;
+
+                left: 50%;
+                top: 50%;
+
+                &--1 {
+                    width: 1px;
+                    height: 50%;
+
+                    transform: translate(-50%, -50%) rotateZ(45deg);
+                }
+                
+                &--2 {
+                    width: 50%;
+                    height: 1px;
+
+                    transform: translate(-50%, -50%) rotateZ(45deg);
+                }
+            }
+        }
+    
+        &__quant {
+            height: 33px;
+            width:  80px;
+
+            // background-color: #fff;
+            border: 1px solid var(--color-primary);
+            border-radius: 3px;
+
+            padding: 0 11px;
+
+            position: relative;
+            top: -00px;
+            right: -15px;
+
+            @include flex-container (row, space-between, center);
+            
+            &__minus {
+                width: 10px;
+                height: 2px;
+
+                cursor: pointer;
+
+                background-color: var(--color-secondary);
+
+                border-radius: 999px;
+            }
+    
+            &__number {
+                font-weight: 1000;
+                font-size: 1.3rem;
+            }
+    
+            &__plus {
+                height: 10px;
+                width:  10px;
+
+                cursor: pointer;
+
+                // background-color: #f00;
+
+                position: relative;
+
+                &__line {
+
+                    border-radius: 999px;
+
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    
+                    transform: translate(-50%, -50%);
+
+                    background-color: var(--color-secondary);
+
+                    &--1 {
+                        width: 2px;
+                        height: 100%;
+                    }
+
+                    &--2 {
+                        height: 2px;
+                        width:  100%;
+                    }
+                }
+            }
+        }
+    
+        &__price {
+            font-size: 1.7rem;
+            font-weight: 700;
+        }
+
+    }
+
+    &__footer {
+        @include flex-container (column, flex-start, center);
+
+        width: 100%;
+
+    }
+
+    &__subtotal-box {
+        padding: 15px 10px 0 10px;
+        margin-bottom: 30px;
+        width: 100%;
+        @include flex-container(row, space-between, center);
+
+        position: relative;
+
+        &::before {
+            content: "";
+
+            position: absolute;
+
+            left: 50%;
+            top: -0%;
+            transform: translate(-50%, -50%);
+
+            height: 1px;
+            width: 105%;
+
+            background-color: #707070;
+            border-radius: 999px;
+        }
+    }
+
+    &__subtotal {
+        font-size: 1.7rem;
+        font-weight: 800;
+    }
+    
+    &__subtotal-value {
+        font-size: 1.7rem;
+        font-weight: 800;
+    }
+
+    &__buy-button {
+        height: 40px;
+        width: 100%;
+
+        font-size: 1.6rem;
+    }
+
+}

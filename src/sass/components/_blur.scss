@@ -1,0 +1,22 @@
+.blur {
+    height: 100vh;
+
+    position: fixed;
+
+    backdrop-filter: blur(0Px), brightness(100%);
+    
+    width: 100vw;
+    
+    z-index: -1;
+    
+    transition: backdrop-filter .4s cubic-bezier(0.645, 0.045, 0.355, 1),
+                z-index  .4s .5s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+    &.active {
+        z-index: 120;
+        backdrop-filter: blur(2px) brightness(60%);
+        
+        transition: backdrop-filter .4s cubic-bezier(0.645, 0.045, 0.355, 1),
+                    z-index .4s 0s;
+    }
+}

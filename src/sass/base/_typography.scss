@@ -1,0 +1,12 @@
+.brand:link,
+.brand:visited {
+    font-family: "New York";
+
+    font-size: 3rem;
+    color: var(--color-primary);
+}
+
+html {
+    font-size: 62.5%; // 1rem = 10px
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

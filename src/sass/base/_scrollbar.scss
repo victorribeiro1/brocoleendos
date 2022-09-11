@@ -1,0 +1,18 @@
+::-webkit-scrollbar {
+    width: 5px;
+    // z-index: -1;
+
+    @media only screen and (max-width: 600px) {
+        width: 0px;
+    }
+
+    &-thumb {
+        background-color: var(--color-secondary);
+        // border-radius: 999px;
+        height: 10px;
+    }
+    
+    &-track {
+        background-color: #0000;
+    }
+}

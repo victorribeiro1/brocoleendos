@@ -1,0 +1,46 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    scroll-behavior: smooth;
+
+    overflow-x: hidden;
+
+    overflow-y: scroll;
+
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+
+    transition: overflow .4s .5s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+    &.no-overflow {
+        overflow-y: hidden;
+        transition: overflow-y .4s 0s cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
+
+}
+
+body {
+    // background: var(--color-primary);
+    background: var(--color-background);
+    background-size: cover;
+    box-sizing: border-box;
+    
+    border: none;
+}
+
+::selection {
+    background-color: transparent;
+    color: #00ff00;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+    color: currentColor;
+}

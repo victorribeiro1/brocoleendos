@@ -1,0 +1,86 @@
+.header {
+    // background-color: lightblue;
+    position: relative;
+    height: 100vh;
+
+    // filter: brightness(50%);
+
+    &__content {
+        @include flex-container(row, flex-start, center);
+
+        height: 100vh;
+    }
+
+    &__text-box {
+        width: 50%;
+        height: 100%;
+
+        // background-color: #f5f;
+
+        position: relative;
+
+        padding-top: 100px;
+        padding-left: var(--padding);
+    }
+    
+    h1 {
+        font-size: 15rem;
+        word-spacing: 0px;
+        line-height: 115px;
+        color: var(--color-primary);
+        max-width: 85%;
+        font-weight: 100;
+    }
+
+    &__confidence-text {
+        font-size: 2rem;
+        font-style: italic;
+        color: var(--color-secondary);
+        max-width: 80%;
+
+        margin: 30px 0;
+    }
+
+    &__main-button-box {
+        // position: relative;
+        // bottom: -20px;
+        height: 4.9rem;
+        width:  28rem;
+    }
+
+    &__img-box {
+        background-color: #fff;
+        width: 50%;
+        height: 100%;
+
+        position: relative;
+    }
+
+    &__img {
+        background-image: url("../medias/images/nature.jpg");
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        height: 100%;
+    }
+
+    &__img-text {
+        position: absolute;
+        top: 86%;
+        left: 18px;
+
+        font-weight: 100;
+        word-spacing: 2px;
+
+        color: var(--color-secondary);
+
+        font-size: 2.4rem;
+        max-width: 35%;
+        line-height: 26px;
+
+        span {
+            font-style: italic;
+            text-decoration: line-through;
+        }
+    }
+}

@@ -1,0 +1,137 @@
+.footer {
+
+    max-height: 300px;
+
+    &__contact-area {
+        background-color: var(--color-secondary);
+
+        @include flex-container(row, space-between, center);
+
+        border-bottom-left-radius: 40px;
+
+        padding: 145px var(--padding) 45px 80px;
+        
+        position: relative;
+        top: -100px;
+
+        z-index: 1;
+        
+    }
+    
+    &__our-team {
+        font-size: 1.8rem;   
+        color: white;
+        font-weight: 600;
+    }
+    
+    &__e-mail-box {
+        width: 58%;
+        background-color: #000;
+        height: 8rem;
+        border-radius: 8px;
+
+        @include flex-container(row, space-around, center);
+
+        input {
+            width: 68%;
+            height: 60%;
+            background-color: #fff0;
+            border: 0;
+            color: white;
+            padding-left: 15px;
+            outline: 0;
+            font-size: 1.6rem;
+
+            &::placeholder {
+                color: white;
+                font-style: italic;
+
+            }
+        }
+        
+        button {
+            height: 70%;
+            width: 26%;
+
+            border-radius: 8px;
+
+            border: 0;
+            background-color: #fff;
+            color: var(--color-secondary);
+            font-size: 1.7rem;
+            font-weight: 1000;
+        }
+    }
+    
+    &__content {
+        background-color: #000;
+        padding: 130px var(--padding) 20px var(--padding);
+        
+        position: relative;
+        top: -200px;
+        z-index: 0;
+
+        @include flex-container(column, center, center); 
+    }
+    
+    &__container {
+        @include flex-container(column, space-around, center); 
+
+        // background-color: #fff;
+    }
+    
+    &__social-medias {
+        @include flex-container(row, space-around, center); 
+
+        margin-bottom: 25px;
+
+        :not(:last-child) {
+            margin-right: 10px;
+        }
+    }
+
+    &__social-media {
+        border: 1px solid white;
+        border-radius: 999px;
+
+        height: 4.4rem;
+        width:  4.4rem;
+
+        @include flex-container(row, center, center);
+        
+        &__img {
+        }
+    }
+    
+    &__links {
+        @include flex-container(row, space-between, center);
+
+        // background-color: #fff;
+
+        margin-bottom: 25px;
+
+        width: 35rem;
+
+    }
+
+    &__link {
+        &,
+        &:link,
+        &:visited {
+            color: white;
+            font-size: 1.8rem;
+            font-style: italic;
+        }
+    }
+
+    .brand {
+    }
+
+    &__copyright {
+        color: #eee;
+        position: absolute;
+        left: 20px;
+        bottom: 20px;
+        font-size: 1.6rem;
+    }
+}

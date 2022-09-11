@@ -1,0 +1,214 @@
+.products {
+    padding: 0 0 0 var(--padding);
+    padding-bottom: 100px;
+
+    position: relative;
+
+    &::before {
+        content: "";
+        
+        position: absolute;
+
+        bottom: 20px;
+        right: 50%;
+
+        display: block;
+
+        border-radius: 999px;
+
+        transform: translate(50%, 0%);
+
+        height: 3px;
+        width: calc(100% - var(--padding) * 2);
+        
+
+        background-color: var(--color-secondary);
+    }
+
+    &__header {
+        // background-color: #f58;
+
+        @include flex-container(row, space-between, flex-start);
+    }
+
+    &__heading {
+        color: var(--color-secondary);
+        font-weight: 400;
+        font-size: 13rem;
+        position: relative;
+        top: -50px;
+    }
+    
+    &__explorar {
+
+        color: var(--color-secondary);
+        font-weight: 400;
+        font-size: 5.6rem;
+        position: relative;
+        bottom: -100px;
+        left: -85px;
+    }
+
+    &__img-box {
+        @include flex-container(row, space-between, flex-start);
+    }
+
+    &__img {
+        &--1 {
+            border-radius: 0 999px 999px 0;
+
+            margin-left: calc( -1 * var(--padding));
+        }
+
+        &--2 {
+            position: relative;
+            bottom: -65px;
+
+            animation: rodopiaMaria 50s infinite linear;
+        }
+    }
+
+    &__lists {
+        // background-color: #f35;
+
+        margin-top: 90px;
+    }
+
+    &__list-box {
+        &:not(:last-child) {
+            margin-bottom: 40px;
+        }
+
+    }
+
+    &__list-heading {
+        font-size: 9rem;
+        font-weight: 1000;
+
+        color: var(--color-secondary);
+
+        // background-color: #0f0;
+
+        margin-top: -20px;
+        margin-bottom: 20px
+    }
+
+    &__list {
+        @include flex-container(row, flex-start, center);
+
+        overflow-x: scroll;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    &__product {
+        min-width:  37.9rem;
+
+        &:not(:last-of-type) {
+            margin-right: 20px
+        }
+
+        // background-color: #f98;
+        @include flex-container(column, flex-start, flex-start);
+        
+        
+        &__img-box {
+            height: 22.1rem;
+            width: 100%;
+            border-radius: 11px;
+            overflow: hidden;
+            
+            padding: 10px var(--padding) 0 var(--padding);
+            
+            position: relative;
+
+            @include flex-container(row, space-between, flex-start)
+        }
+        
+        &__img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        &__counter {
+            position: relative;
+            z-index: 1;
+            
+
+            font-size: 2.5rem;
+
+            color: var(--color-secondary);
+        }
+        
+        &__heart {
+            position: relative;
+            z-index: 1;
+            bottom: -8px;
+        }
+
+        &__content {
+            // background-color: #f00;
+
+            padding: 15px 5px;
+            width: 100%;
+        }
+        
+        &__row {
+            @include flex-container(row, space-between, flex-start);
+            
+            &:not(:last-of-type) {
+                margin-bottom: 20px;
+            }
+        }
+
+        &__name {
+            font-size: 2.3rem;
+            font-weight: 1000;
+        }
+        
+        &__price {
+            font-size: 1.8rem;
+            font-weight: 1000;
+            position: relative;
+            bottom: -3px;
+
+        }
+
+        &__button-box {
+            height: 3.5rem;
+            width:  16rem;
+
+            font-size: 1.6rem;
+        }
+    }
+
+    &__see-all {
+        // background-color: #00f;
+
+        margin-top: 60px;
+
+        @include flex-container(row, center, center);
+    }
+
+    &__see-all-button-box {
+        height: 4rem;
+        width: 22rem;
+        border-radius: 999px;
+        overflow: hidden;
+        font-size: 1.5rem;
+    }
+}
+
+@keyframes rodopiaMaria {
+    to {
+        transform: rotateZ(0deg);
+    }
+
+    from {
+        transform: rotate(360deg);
+    }
+}

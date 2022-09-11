@@ -1,0 +1,8 @@
+%link-fix {
+    &,
+    &:link,
+    &:visited {
+        text-decoration: none;
+        color: currentColor;
+    }
+}
