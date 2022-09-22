@@ -2,16 +2,20 @@
     // background-color: lightblue;
     position: relative;
     height: 100vh;
+    min-height: 800px;
 
     // filter: brightness(50%);
 
     &__content {
         @include flex-container(row, flex-start, center);
 
-        height: 100vh;
+        height: 100%;
     }
 
     &__text-box {
+        // @include flex-container(column, space-between, flex-start);
+
+
         width: 50%;
         height: 100%;
 
@@ -24,9 +28,9 @@
     }
     
     h1 {
-        font-size: 15rem;
+        font-size: 11rem;
         word-spacing: 0px;
-        line-height: 115px;
+        line-height: 90px;
         color: var(--color-primary);
         max-width: 85%;
         font-weight: 100;
@@ -57,9 +61,9 @@
     }
 
     &__img {
-        background-image: url("../medias/images/nature.jpg");
+        background-image: url("../midias/imagens/nature.jpg");
         background-position: center;
-        background-size: 100%;
+        background-size: cover;
         background-repeat: no-repeat;
         height: 100%;
     }

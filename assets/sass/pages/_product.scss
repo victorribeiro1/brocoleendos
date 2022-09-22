@@ -3,11 +3,15 @@
 
     @include flex-container(row, flex-start, flex-start);
 
+    &__related {
+        width: 100%;
+    }
+
     &__img {
         height: calc(100vh - 8rem);
         width: 50%;
 
-        background-image: url("../medias/images/laranjas-portrait.jpg");
+        background-image: url("../midias/imagens/laranjas-portrait.jpg");
         background-size: cover;
         // image-rendering: pixelated;
         background-position: center;

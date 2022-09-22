@@ -6,6 +6,24 @@
     
     position: relative;
 
+    @media only screen and (max-width: 1750px) {
+        &__saude {
+            right: 250px !important;
+        }
+
+        &__satisfacao {
+            bottom: 175px !important;
+        }
+
+        &__small-img {
+            left: -5% !important;
+        }
+
+        &__ball {
+            transform: translate(-10%, 60%) rotateZ(-15deg) !important;
+        }
+    }
+
     &::before {
         content: "";
         
@@ -48,6 +66,12 @@
             font-size: 15rem;
 
             color: var(--color-secondary);
+        }
+
+        @media only screen and (max-width: 1750px) {
+            & > * {
+                font-size: 10rem;
+            }
         }
         
    } 
@@ -108,7 +132,7 @@
 
    &__blur {
         height: 900px;
-        width:  1000px;
+        width:  800px;
 
         // background-color: red;
 
